@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/splitTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/splitTools/splitTools_{{ version }}.tar.gz
-  sha256: 3c1f7852b5faddedca8be4d5c3d10b23eae39d59a1c05159fd83b9ce159abb04
+  sha256: 5d6388192532923f58f76e3a931ce5108a7b8398745e2274418e42f5e91c38d4
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -37,12 +37,8 @@ test:
 about:
   home: https://github.com/mayer79/splitTools
   license: GPL-2.0-or-later
-  summary: Fast, lightweight toolkit for data splitting. Data sets can be partitioned into disjoint
-    groups (e.g. into training, validation, and test) or into (repeated) k-folds for
-    subsequent cross-validation. Besides basic splits, the package supports stratified,
-    grouped as well as blocked splitting. Furthermore, cross-validation folds for time
-    series data can be created. See e.g. Hastie et al. (2001) <doi:10.1007/978-0-387-84858-7>
-    for the basic background on data partitioning and cross-validation.
+  summary: Fast, lightweight toolkit for data splitting. Data sets can be partitioned into disjoint groups (e.g. into training, validation, and test) or into (repeated) k-folds for subsequent cross-validation. Besides basic splits, the package supports stratified, grouped as well as blocked splitting. Furthermore, cross-validation
+    folds for time series data can be created. See e.g. Hastie et al. (2001) <doi:10.1007/978-0-387-84858-7> for the basic background on data partitioning and cross-validation.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
