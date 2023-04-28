@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/splitTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/splitTools/splitTools_{{ version }}.tar.gz
-  sha256: 4b82d142b1f5b1e1fcac1ec6e72cae210c9c370d9c49c2a718cb10e6d75c7770
+  sha256: cafa82e80a56e454baebecea3fa1c9a1278d1f76f49dde9c3543ccbd3f6b8ae1
 
 build:
   merge_build_host: true  # [win]
